@@ -75,7 +75,30 @@
 			"name": "Profesor - Listar todas las prácticas",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [
+					{
+						"key": "USER-ID",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "ROL",
+						"value": "PROFESOR",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"listar"
+					]
+				}
 			},
 			"response": []
 		},
@@ -102,7 +125,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"fechaini\": \"2025-03-10\",\n  \"fechafin\": \"2025-06-10\",\n  \"descripcion\": \"Desarrollo de sitio web institucional con HTML, CSS y JS\",\n  \"empresa\": \"DigitalWeb SPA\",\n  \"jefePractica\": \"María López\",\n  \"estudianteId\": 1,\n  \"profesorId\": 1\n}",
+					"raw": "{\n  \"fechaini\": \"2025-03-10\",\n  \"fechafin\": \"2025-06-10\",\n  \"descripcion\": \"Desarrollo de sitio web institucional con HTML, CSS y JS\",\n  \"empresa\": \"DigitalWeb SPA\",\n  \"direccion\": \"Av. Providencia 1456, Santiago\",\n  \"jefePractica\": \"María López\",\n  \"contacto\": \"+56 9 8234 4455\",\n  \"estudianteId\": 1,\n  \"profesorId\": 1\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,7 +171,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"fechaini\": \"2025-04-01\",\n  \"fechafin\": \"2025-07-15\",\n  \"descripcion\": \"Implementación de API REST con Spring Boot\",\n  \"empresa\": \"SoftTech Ltda\",\n  \"jefePractica\": \"Luis Ramírez\",\n  \"estudianteId\": 1,\n  \"profesorId\": 1\n}",
+					"raw": "{\n  \"fechaini\": \"2025-03-10\",\n  \"fechafin\": \"2025-06-10\",\n  \"descripcion\": \"Creación de nueva práctica\",\n  \"empresa\": \"DigitalWeb SPA\",\n  \"direccion\": \"Av. Providencia 1456, Santiago\",\n  \"jefePractica\": \"María López\",\n  \"contacto\": \"+56 9 8234 4455\",\n  \"estudianteId\": 1,\n  \"profesorId\": 1\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -194,7 +217,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"fechaini\": \"2025-03-20\",\n  \"fechafin\": \"2025-05-30\",\n  \"descripcion\": \"Actualización del módulo de autenticación con implementación de JWT\",\n  \"empresa\": \"TechSolutions SPA\",\n  \"jefePractica\": \"Carlos Moreno\"\n}",
+					"raw": "{\n  \"fechaini\": \"2025-03-20\",\n  \"fechafin\": \"2025-05-30\",\n  \"descripcion\": \"Actualización descripción y dirección de práctica\",\n  \"empresa\": \"TechSolutions SPA\",\n  \"direccion\": \"Dirección 123\",\n  \"jefePractica\": \"Carlos Moreno\",\n  \"contacto\": \"+56 9 4411 2001\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -215,6 +238,47 @@
 					]
 				},
 				"description": "PROFESOR: actualizar información de una práctica (fechas/descripción)."
+			},
+			"response": []
+		},
+		{
+			"name": "Error - Estudiante actualiza práctica",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "ROL",
+						"value": "ESTUDIANTE",
+						"type": "text"
+					},
+					{
+						"key": "USER-ID",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"fechaini\": \"2025-03-20\",\n  \"fechafin\": \"2025-05-30\",\n  \"descripcion\": \"Actualización por estudiante\",\n  \"empresa\": \"TechSolutions SPA\",\n  \"direccion\": \"Dirección 123\",\n  \"jefePractica\": \"Carlos Moreno\",\n  \"contacto\": \"+56 9 4411 2001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/actualizar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"actualizar",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},

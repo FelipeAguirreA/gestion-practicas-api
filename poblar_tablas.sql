@@ -23,14 +23,38 @@ INSERT INTO estudiante (id, nombre, carrera, email) VALUES
 (7, 'Fernanda Ruiz', 'Ingeniería en Informática', 'fruiz@instituto.cl'),
 (8, 'Javier Ortega', 'Técnico en Ciberseguridad', 'jortega@instituto.cl');
 
-INSERT INTO practica (id, fechaini, fechafin, descripcion, empresa, jefe_practica, activo, estudiante_id, profesor_id) VALUES
-(1, '2025-03-01', '2025-05-30', 'Desarrollo de módulo de autenticación', 'TechSolutions SPA', 'Carlos Moreno', true, 1, 1),
-(2, '2025-04-10', '2025-07-10', 'Soporte TI y resolución de incidencias', 'NetCorp Ltda', 'Andrea López', true, 2, 1),
-(3, '2025-02-01', '2025-04-15', 'Maquetación web responsiva', 'Creativa Agency', 'Patricio Abarca', true, 3, 2),
-(4, '2025-01-15', '2025-03-30', 'Automatización de reportes internos', 'Finanzas Chile', 'Olga Cifuentes', true, 4, 2),
-(5, '2025-05-01', '2025-07-31', 'Desarrollo de dashboard interno', 'Bitech Solutions', 'Jorge Sandoval', true, 5, 3),
-(6, '2025-02-10', '2025-04-20', 'Hardening y monitoreo de servidores', 'SecureNow SPA', 'Sebastián Páez', true, 6, 3),
-(7, '2025-03-05', '2025-05-20', 'Análisis de logs y detección de anomalías', 'CyberGroup Ltda', 'Mauricio Gálvez', true, 7, 4),
-(8, '2025-04-01', '2025-06-30', 'Diseño de prototipo interactivo', 'UXLab Studio', 'Francisca Reyes', true, 3, 4),
-(9, '2025-01-20', '2025-03-10', 'Migración de base de datos a PostgreSQL', 'DataSystems Chile', 'Luis Tapia', true, 8, 5),
-(10, '2025-03-15', '2025-05-15', 'Integración de API REST para módulo interno', 'InnovaTech SA', 'Paula Contreras', false, 1, 5); 
+INSERT INTO practica (
+    id, fechaini, fechafin, descripcion, empresa, direccion,
+    jefe_practica, contacto, activo, estudiante_id, profesor_id
+) VALUES
+(1, '2025-03-01', '2025-05-30', 'Desarrollo de módulo de autenticación',
+ 'TechSolutions SPA', 'Av. Providencia 1200',
+ 'Carlos Moreno', '+56 9 4411 2001', true, 1, 1),
+(2, '2025-04-10', '2025-07-10', 'Soporte TI y resolución de incidencias',
+ 'NetCorp Ltda', 'Av. Pajaritos 554',
+ 'Andrea López', '+56 9 5512 3388', true, 2, 1),
+(3, '2025-02-01', '2025-04-15', 'Maquetación web responsiva',
+ 'Creativa Agency', 'San Diego 224',
+ 'Patricio Abarca', '+56 9 9988 1120', true, 3, 2),
+(4, '2025-01-15', '2025-03-30', 'Automatización de reportes internos',
+ 'Finanzas Chile', 'Av. Matta 789',
+ 'Olga Cifuentes', '+56 9 7744 5533', true, 4, 2),
+(5, '2025-05-01', '2025-07-31', 'Desarrollo de dashboard interno',
+ 'Bitech Solutions', 'Av. Ossa 1302',
+ 'Jorge Sandoval', '+56 9 8877 3301', true, 5, 3),
+(6, '2025-02-10', '2025-04-20', 'Hardening y monitoreo de servidores',
+ 'SecureNow SPA', 'Av. Italia 455',
+ 'Sebastián Páez', '+56 9 6112 9945', true, 6, 3),
+(7, '2025-03-05', '2025-05-20', 'Análisis de logs y detección de anomalías',
+ 'CyberGroup Ltda', 'Av. Recoleta 3020',
+ 'Mauricio Gálvez', '+56 9 4455 2070', true, 7, 4),
+(8, '2025-04-01', '2025-06-30', 'Diseño de prototipo interactivo',
+ 'UXLab Studio', 'Av. Bilbao 4500',
+ 'Francisca Reyes', '+56 9 7001 9931', true, 3, 4),
+(9, '2025-01-20', '2025-03-10', 'Migración de base de datos a PostgreSQL',
+ 'DataSystems Chile', 'Av. Grecia 3340',
+ 'Luis Tapia', '+56 9 8800 5521', true, 8, 5),
+(10, '2025-03-15', '2025-05-15', 'Integración de API REST para módulo interno',
+ 'InnovaTech SA', 'Av. Las Condes 10990',
+ 'Paula Contreras', '+56 9 9922 4400', false, 1, 5);
+

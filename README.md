@@ -56,7 +56,9 @@ La base de datos contiene tres tablas principales:
 - fechaini  
 - fechafin  
 - empresa  
+- dirección
 - jefe_practica  
+- contacto
 - descripcion  
 - estudiante_id (FK)  
 - profesor_id (FK)  
@@ -108,6 +110,11 @@ En lugar de borrar registros, la API marca la práctica como **inactiva** median
 private boolean activo = true;
 
 ```
+
+Una práctica desactivada:
+
+- deja de mostrarse en las respuestas
+- pero se mantiene en la base de datos, permitiendo trazabilidad
 ---
 
 ## 🗄️ Base de datos
