@@ -21,7 +21,9 @@ public class Practica {
     private LocalDate fechafin;
     private String descripcion;
     private String empresa;
+    private String direccion;
     private String jefePractica;
+    private String contacto;
     private boolean activo = true;
 
     @ManyToOne
@@ -31,4 +33,13 @@ public class Practica {
     @ManyToOne
     @JoinColumn(name = "profesor_id")
     private Profesor profesor;
+
+    //mostrar nombres de profesor y estudiante
+    public String getNombreEstudiante() {
+        return estudiante.getNombre();
+    }
+
+    public String getNombreProfesor() {
+        return profesor.getNombre();
+    }
 }

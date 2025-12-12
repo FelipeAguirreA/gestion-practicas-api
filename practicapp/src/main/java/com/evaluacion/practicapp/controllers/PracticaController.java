@@ -157,7 +157,9 @@ public class PracticaController {
                 request.getFechafin(),
                 request.getDescripcion(),
                 request.getEmpresa(),
-                request.getJefePRactica(),
+                request.getDireccion(),
+                request.getJefePractica(),
+                request.getContacto(),
                 request.getEstudianteId(),
                 request.getProfesorId());
                 

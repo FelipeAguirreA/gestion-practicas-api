@@ -9,7 +9,9 @@ public class CrearPracticaRequest {
     private LocalDate fechafin;
     private String descripcion;
     private String empresa;
-    private String jefePRactica;
+    private String direccion;
+    private String jefePractica;
+    private String contacto;
     private Long estudianteId;
     private Long profesorId;
 

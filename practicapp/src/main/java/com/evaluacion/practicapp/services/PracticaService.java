@@ -50,7 +50,9 @@ public class PracticaService {
             LocalDate fechafin,
             String descripcion,
             String empresa,
+            String direccion,
             String jefePractica,
+            String contacto,
             Long estudianteId,
             Long profesorId) {
 
@@ -66,7 +68,9 @@ public class PracticaService {
         practica.setFechafin(fechafin);
         practica.setDescripcion(descripcion);
         practica.setEmpresa(empresa);
+        practica.setDireccion(direccion);
         practica.setJefePractica(jefePractica);
+        practica.setContacto(contacto);
 
         practica.setEstudiante(estudiante);
         practica.setProfesor(profesor);
@@ -84,7 +88,9 @@ public class PracticaService {
         practica.setFechaini(datosPractica.getFechaini());
         practica.setFechafin(datosPractica.getFechafin());
         practica.setEmpresa(datosPractica.getEmpresa());
+        practica.setDireccion(datosPractica.getDireccion());
         practica.setJefePractica(datosPractica.getJefePractica());
+        practica.setContacto(datosPractica.getContacto());
         return practicaRepository.save(practica);
     }
 
